@@ -1,9 +1,17 @@
 WdSampleapp::Application.routes.draw do
-  get "pages/home"
+  root :to => "pages#home"
+  match '/contact', :to => 'pages#contact'
+  match '/about', :to => 'pages#about'
+  match '/help', :to => 'pages#help'
 
-  get "pages/contact"
-  get "pages/about"
-  get "pages/help"
+
+  
+#  root :to => 'pages#home'
+
+  # You can have the root of your site routed with 
+  #    "root"
+  #   then, you would delete public/index.html.
+  #   root :to => "welcome#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
