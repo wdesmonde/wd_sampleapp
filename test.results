@@ -1,0 +1,122 @@
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/launchy-0.3.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/erubis-2.6.6.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/bundler-1.0.11.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rack-1.2.2.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.5.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rest-client-1.6.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/sqlite3-ruby-1.3.3.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/heroku-1.20.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rake-0.8.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rubygems-update-1.7.2.gemspec:11.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/treetop-1.4.9.gemspec:11.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/shared_helpers.rb:3.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/launchy-0.3.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/erubis-2.6.6.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/bundler-1.0.11.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rack-1.2.2.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.5.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rest-client-1.6.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/sqlite3-ruby-1.3.3.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/heroku-1.20.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rake-0.8.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rubygems-update-1.7.2.gemspec:11.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/treetop-1.4.9.gemspec:11.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/source.rb:162.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/source.rb:162.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/shared_helpers.rb:84.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/shared_helpers.rb:3.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/launchy-0.3.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/erubis-2.6.6.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/bundler-1.0.11.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rack-1.2.2.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.5.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rest-client-1.6.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/sqlite3-ruby-1.3.3.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/heroku-1.20.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rake-0.8.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rubygems-update-1.7.2.gemspec:11.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/treetop-1.4.9.gemspec:11.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/launchy-0.3.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/erubis-2.6.6.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/bundler-1.0.11.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rack-1.2.2.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rails-3.0.5.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rest-client-1.6.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/sqlite3-ruby-1.3.3.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/heroku-1.20.1.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rake-0.8.7.gemspec:10.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/rubygems-update-1.7.2.gemspec:11.
+NOTE: Gem::Specification#default_executable= is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem::Specification#default_executable= called from /usr/lib/ruby/gems/1.8/specifications/treetop-1.4.9.gemspec:11.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/source.rb:162.
+NOTE: Gem::SourceIndex#each is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#each called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/source.rb:162.
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.11/lib/bundler/shared_helpers.rb:84.
+No DRb server is running. Running in local process instead ...
+/usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/configuration.rb:419:in `load': /home/wendy/rubystuff/wd_sampleapp/spec/models/user_spec.rb:129: syntax error, unexpected $end, expecting kEND (SyntaxError)
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/configuration.rb:419:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/configuration.rb:419:in `map'
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/configuration.rb:419:in `load_spec_files'
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/command_line.rb:18:in `run'
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/runner.rb:80:in `run_in_process'
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/runner.rb:66:in `run'
+	from /usr/lib/ruby/gems/1.8/gems/rspec-core-2.6.4/lib/rspec/core/runner.rb:11
+	from /usr/lib/ruby/gems/1.8/bin/rspec:19
