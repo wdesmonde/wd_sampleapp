@@ -43,6 +43,7 @@ class User < ActiveRecord::Base
     encrypted_password == encrypt(submitted_password)
   end
 
+  # this is the one Hartl has in the main part of the book
   # explictly tests for no password and having matching password
   #  case of mismatched password handled because then reach end
   #  of method, which automatically returns nil
@@ -51,6 +52,65 @@ class User < ActiveRecord::Base
     return nil if user.nil?
     return user if user.has_password?(submitted_password)
   end
+
+  # exercise from Hartl in section 7.5 to show alternatives to 
+  #   authenticate method
+=begin
+  #  using User instead of self in the method
+  def User.authenticate(email, submitted_password)
+    user = find_by_email(email)
+    return nil if user.nil?
+    return user if user.has_password?(submitted_password)
+  end
+=end
+
+=begin
+  # the authenticate method with an explicit third return
+  def self.authenticate(email, submitted_password)
+    user = find_by_email(email)
+    return nil if user.nil?
+    return user if user.has_password?(submitted_password)
+    return nil
+  end
+=end
+
+=begin
+  # the authenticate method using an if statment
+  def self.authenticate(email, submitted_password)
+    user = find_by_email(email)
+    if user.nil?
+      nil
+    elsif user.has_password?(submitted_password)
+      user
+    else
+      nil
+    end
+  end
+=end
+
+=begin
+  # the authenticate method using an if statement and an
+  #   implicit return
+  def self.authenticate(email, submitted_password)
+    user = find_by_email(email)
+    if user.nil?
+      nil
+    elsif user.has_password?(submitted_password)
+      user
+    end
+  end
+=end
+
+=begin
+  # the authenticate method using the ternary operator
+  def self.authenticate(email,submitted_password)
+    user = find_by_email(email)
+    user && user.has_password?(submitted_password) ? user : nil
+  end
+=end
+
+
+
 
   private
 
