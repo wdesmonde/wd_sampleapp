@@ -211,6 +211,23 @@ describe UsersController do
       end
     end
 
+    describe "for signed-in users" do
+      before(:each) do
+        wrong_user = Factory(:user, :email => "userish@example.net")
+        test_sign_in(wrong_user)
+      end
+
+      it "should require matching users for 'edit'" do
+        get :edit, :id => @user
+        response.should redirect_to(root_path)
+      end
+
+      it "should require matching users for 'update'" do
+        put :update, :id => @user, :user => {}
+        response.should redirect_to(root_path)
+      end
+
+    end
   end
 
 end
