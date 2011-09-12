@@ -17,6 +17,7 @@ describe UsersController do
         @user = test_sign_in(Factory(:user))
         second = Factory(:user, :name => "Tom", :email => "another@example.com")
         third = Factory(:user, :name => "Joe", :email => "another@example.net")
+        @admin = Factory(:user, :email => "adminish@example.com", :admin => true)
 
         @users = [@user, second, third]
         30.times do
@@ -24,32 +25,92 @@ describe UsersController do
         end
       end
 
-      it "should be successful" do
-        get :index
-        response.should be_success
-      end
+      describe "non-admin users" do
+        before(:each) do
+          test_sign_in(@user)
+        end
 
-      it "should have the right title" do
-        get :index
-        response.should have_selector("title", :content => "All Users")
-      end
+        it "should be successful" do
+          get :index
+          response.should be_success
+        end
 
-      it "should have an element for each user" do
-        get :index
-        @users[0..2].each do |user|
-          response.should have_selector("li", :content => user.name)
+        it "should have the right title" do
+          get :index
+          response.should have_selector("title", :content => "All Users")
+        end
+
+        it "should have an element for each user" do
+          get :index
+          @users[0..2].each do |user|
+            response.should have_selector("li", :content => user.name)
+          end
+        end
+
+        it "should not have a delete link for any user" do
+          get :index
+          @users[0..2].each do |user|
+            response.should_not have_selector("li", 
+              :content => "Are you sure you want to delete #{user.name}")
+          end
+        end
+
+        it "should paginate users" do
+          get :index
+          response.should have_selector("div.pagination")
+          response.should have_selector("span.disabled", :content => "Previous")
+          response.should have_selector("a", :href => "/users?page=2",
+            :content => "2")
+          response.should have_selector("a", :href => "/users?page=2",
+            :content => "Next")
         end
       end
 
-      it "should paginate users" do
-        get :index
-        response.should have_selector("div.pagination")
-        response.should have_selector("span.disabled", :content => "Previous")
-        response.should have_selector("a", :href => "/users?page=2",
-          :content => "2")
-        response.should have_selector("a", :href => "/users?page=2",
-          :content => "Next")
+      describe "admin users" do
+        before(:each) do
+          test_sign_in(@admin)
+        end
+
+        it "should be successful" do
+          get :index
+          response.should be_success
+        end
+
+        it "should have the right title" do
+          get :index
+          response.should have_selector("title", :content => "All Users")
+        end
+
+        it "should have an element for each user" do
+          get :index
+          @users[0..2].each do |user|
+            response.should have_selector("li", :content => user.name)
+          end
+        end
+
+        it "should have a delete link for each user except self" do
+          get :index
+          response.should_not have_selector("li", 
+            # :content => "Are you sure you want to delete #{@admin.name}")
+            :content => "delete")
+          @users[0..2].each do |user|
+            response.should have_selector("li", 
+              :content => "Are you sure you want to delete #{user.name}")
+              # :content => "delete")
+          end
+        end
+
+        it "should paginate users" do
+          get :index
+          response.should have_selector("div.pagination")
+          response.should have_selector("span.disabled", :content => "Previous")
+          response.should have_selector("a", :href => "/users?page=2",
+            :content => "2")
+          response.should have_selector("a", :href => "/users?page=2",
+            :content => "Next")
+        end
       end
+      
     end
 
   end
@@ -84,42 +145,56 @@ describe UsersController do
     
   describe "GET 'new'" do
 
-    it "should be successful" do
-      get 'new'
-      response.should be_success
+    describe "for non-signed-in users" do
+      it "should be successful" do
+        get 'new'
+        response.should be_success
+      end
+
+      it "should have the right title" do
+        get 'new'
+        response.should have_selector("title", :content => "Sign Up")
+      end
+
+      it "should have a name field" do
+        get 'new'
+        response.should have_selector("input[name='user[name]'][type='text']")
+      end
+
+      it "should have an email field" do
+        get 'new'
+        response.should have_selector("input[name='user[email]'][type='text']")
+      end
+
+      it "should have a password field" do
+        get 'new'
+        response.should have_selector(
+           "input[name='user[password]'][type='password']")
+      end
+
+      it "should have a password confirmation field" do
+        get 'new'
+        response.should have_selector(
+           "input[name='user[password_confirmation]'][type='password']")
+      end
     end
 
-    it "should have the right title" do
-      get 'new'
-      response.should have_selector("title", :content => "Sign Up")
-    end
+    describe "for signed-in users" do
+      before(:each) do
+        @user = Factory(:user)
+      end
 
-    it "should have a name field" do
-      get 'new'
-      response.should have_selector("input[name='user[name]'][type='text']")
-    end
-
-    it "should have an email field" do
-      get 'new'
-      response.should have_selector("input[name='user[email]'][type='text']")
-    end
-
-    it "should have a password field" do
-      get 'new'
-      response.should have_selector(
-         "input[name='user[password]'][type='password']")
-    end
-
-    it "should have a password confirmation field" do
-      get 'new'
-      response.should have_selector(
-         "input[name='user[password_confirmation]'][type='password']")
+      it "should deny access to 'new'" do
+        test_sign_in(@user)
+        get 'new'
+        response.should redirect_to(root_path)
+      end
     end
   end
 
   describe "POST 'create'" do
 
-    describe "failure to create" do
+    describe "failure to create with blank entries in fields" do
   
       before(:each) do
         @attr = { :name => "", :email => "", :password => "",
@@ -170,6 +245,18 @@ describe UsersController do
       it "should sign the user in" do
         post :create, :user => @attr
         controller.should be_signed_in
+      end
+    end
+
+    describe "for signed-in users" do
+      before(:each) do
+        @user = Factory(:user)
+      end
+
+      it "should deny access to 'create'" do
+        test_sign_in(@user)
+        post :create, :user => @attr
+        response.should redirect_to(root_path)
       end
     end
   end
