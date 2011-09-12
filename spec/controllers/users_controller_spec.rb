@@ -14,10 +14,10 @@ describe UsersController do
 
     describe "for signed-in users" do
       before(:each) do
+        @admin = Factory(:user, :email => "adminish@example.com", :admin => true)
         @user = test_sign_in(Factory(:user))
         second = Factory(:user, :name => "Tom", :email => "another@example.com")
         third = Factory(:user, :name => "Joe", :email => "another@example.net")
-        @admin = Factory(:user, :email => "adminish@example.com", :admin => true)
 
         @users = [@user, second, third]
         30.times do
@@ -83,6 +83,7 @@ describe UsersController do
 
         it "should have an element for each user" do
           get :index
+          response.should have_selector("li", :content => @admin.name)
           @users[0..2].each do |user|
             response.should have_selector("li", :content => user.name)
           end
@@ -90,13 +91,12 @@ describe UsersController do
 
         it "should have a delete link for each user except self" do
           get :index
-          response.should_not have_selector("li", 
-            # :content => "Are you sure you want to delete #{@admin.name}")
-            :content => "delete")
+          response.should_not have_selector("a", :href => "users/1",
+              :content => "Are you sure you want to delete #{@admin.name}")
           @users[0..2].each do |user|
             response.should have_selector("li", 
-              :content => "Are you sure you want to delete #{user.name}")
-              # :content => "delete")
+          #    :content => "Are you sure you want to delete #{user.name}")
+               :content => "delete")
           end
         end
 
@@ -390,8 +390,8 @@ describe UsersController do
 
     describe "as an admin user" do
       before(:each) do
-        admin = Factory(:user, :email => "adminish@example.com", :admin => true)
-        test_sign_in(admin)
+        @admin = Factory(:user, :email => "adminish@example.com", :admin => true)
+        test_sign_in(@admin)
       end
 
       it "should destroy the user" do
@@ -404,6 +404,12 @@ describe UsersController do
         delete :destroy, :id => @user
         response.should redirect_to(users_path)
       end
-    end
+
+      it "should not allow an admin to destroy themself" do
+        lambda do
+          delete :destroy, :id => @admin
+        end.should_not change(User, :count).by(-1)
+      end
+    end # end desc as admin
   end # end describe delete
 end
